@@ -1,0 +1,69 @@
+# Notes
+GIT is a Version Control System; meaning it can record changes to files over time while also having the ability to revert it back to older version. You can also compare changes to the versions. You have complete version control over the lifespan of your project.
+
+There are three main stages of GIT
+Committed: This is a file that is in the local area/database where the project is.
+Modified: This is the same as Committed only that no actual changes have
+been officially made to said file
+Staged: While modified is the state of being edited but not being added
+to the file. Staged is when the changes to the file are officially committed (edited) to the project
+
+Untracked is another way of saying that a file isn't being detected by GIT.
+
+There are also three main parts of GIT
+
+.git directory (aka Repository): This is the origin project data and what is used for the the remote server 
+Files in this stage are committed and recorded to the project as version snapshots
+Working Directory (aka checkout): This is a single copy of one of the versions of the project
+Changes to files since the last checkout have been not yet added to the staging area for commit
+Staging Area (aka Index): This is what is used to build up one or more changes in order to be committed into the project. You get the ability to add (commit) whichever snapchat, version, into the Repository
+Files in this state have been modified and added to be staged in the next snapshot
+
+Step-By-Step:
+add
+commit
+push
+
+Command Line (commands)
+
+Run Commands: Type a specific command and then hit ENTER to execute
+
+Windows: Command prompt or Powershell
+Mac and Linux: Terminal
+
+Simple Commands:
+pwd - Print working directory = Let's you know where you are at in the terminal
+cd - Change working directory = Changes your location 
+ls - List files in a directory (dir for window users)
+touch - Creates a new empty file (copy con also works for window users)
+mkdir - Creates a new empty folder 
+clear - Moves the history of commands out of view. 
+
+Basic Commands (Git):
+git-status: This is a command that shows the differences between the index file and the current main commit
+- git status -s/--short: A shorten version of the prime git-status via listing the letters
+-- [helpful]
+M = Modified
+A = New file added to staging area
+?? = New file untracked by Git
+
+git-diff: Shows the changes what have been staged and the changed that have been made
+git commit -a -m '[INSERT MESSSAGE]': Automatically commits changes (removes the need for using git add)
+- https://chris.beams.io/posts/git-commit/ (in-depth git committing messages)
+git log: Shows the previous commits via chronological order by showing the timestamp (date) of when the commit was made and the author of the commit
+git rm: This makes the select file(s) to become untracked and goes into the background as deleted
+
+A branch is just an independent line from the main/master which has it's own form of development 
+
+git checkout: This is used to switch between branches (and can also restore or create branches)
+git branch: This creates a new branch and can also delete and list them 
+git stash: This stashes the changes in a directory and puts it in a WIP state
+git merge: This pushes the branches into one big one (usually pushing one of the branches into the main/master one)
+git clone: This is used to clone a project via a code provider link (specifically github)
+
+
+The Three Options of Git Rest
+
+- git reset --soft: This moves the commits (changes) back into the staging area
+- git reset --mixed: This is the default option and moves the commits (changes) to the working directory
+- git reset --hard: This completely trashes and deletes the commits (changes)
